@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>✅ Short URL Created</h2>
+
+<p id="shortLink">
+    http://127.0.0.1:5000/{{ short_code }}
+</p>
+
+<button onclick="copyLink()">📋 Copy Link</button>
+<br><br>
+<a href="/">⬅ Back</a>
+
+<script>
+function copyLink() {
+    var text = document.getElementById("shortLink").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Copied!");
+}
+</script>
+{% endblock %}
