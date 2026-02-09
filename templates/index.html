@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Advanced URL Shortener</h2>
+
+<form method="POST" action="/shorten">
+    <input type="text" name="url" placeholder="Enter URL (https://...)" required>
+    <input type="text" name="custom_code" placeholder="Custom code (optional)">
+    <input type="number" name="expiry" placeholder="Expiry in days (optional)">
+    <button type="submit">Shorten URL</button>
+</form>
+
+<div style="margin-top: 15px;">
+    <a href="/history">📊 View History</a>
+</div>
+
+{% endblock %}
